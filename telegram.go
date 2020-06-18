@@ -5,16 +5,14 @@ import (
   "bytes"
 	"encoding/json"
 	"errors"
-	"fmt"
 	"net/http"
-	"net/url"
   "time"
 
 )
 
 type TelegramRequestBody struct {
-  Text string 'json:"text"'
-  UserID string 'json:"chat_id"'
+  Text string `json:"text"`
+  UserID string `json:"chat_id"`
 }
 
 func NotifyTelegram(telegramBotURL, msg, id string) error {
